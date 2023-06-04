@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="1" failures="0" name="com.xw.OSSTest" time="0.73" errors="0" skipped="0">
+  <properties>
+    <property name="idea.version" value="2022.2.2"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="D:\learning materials\Java\jdk-8u77-location\jre\bin"/>
+    <property name="java.vm.version" value="25.77-b03"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\Java_materials\personal_blog\XwBlog"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\Java_materials\personal_blog\XwBlog"/>
+    <property name="java.runtime.version" value="1.8.0_77-b03"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="D:\learning materials\Java\jdk-8u77-location\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\86152\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="maven.ext.class.path" value="D:\learning materials\Java\IDEA-location\IntelliJ IDEA 2022.2.2\plugins\maven\lib\maven-event-listener.jar"/>
+    <property name="classworlds.conf" value="D:\learning materials\Java\资料\apache-maven-3.6.0-bin\apache-maven-3.6.0\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="D:\learning materials\Java\jdk-8u77-location\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\learning materials\Python\Python3.10.2\python310\Scripts;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\learning materials\Python\Python3.10.2\python310\Scripts;D:\learning materials\Java\jdk-8u77-location\bin;D:\learning materials\Java\jdk-8u77-location\jre\bin;D:\learning materials\Java\jdk-8u77-location\bin;D:\learning materials\Java\资料\apache-maven-3.6.0-bin\apache-maven-3.6.0\bin;C;\Program Files\dotnet\;D:\learning materials\Java\Git\Git\cmd;D:\learning materials\sql-server\SharedDir\Client SDK\ODBC\170\Tools\Binn\;D:\learning materials\sql-server\SharedDir_x86\150\Tools\Binn\;D:\learning materials\sql-server\SharedDir\150\Tools\Binn\;D:\learning materials\sql-server\SharedDir\150\DTS\Binn\;D:\learning materials\sql-server\SharedDir_x86\150\DTS\Binn\;global;D:\GO\bin;D:\ZIP\Bandizip\;D:\NVM\nvm;D:\NVM\nodejs;D:\learning materials\Python\Python3.10.2\python310\Scripts;D:\learning materials\Python\Python3.10.2\python310\;C:\Users\86152\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Tencent\QQGameTempest\Hall.57734\;D:\learning materials\Python\Pycharm\PyCharm 2021.1.3\bin;;D:\learning materials\mysql\mysql-5.7.19-winx64\mysql-5.7.19-winx64\bin;C:\Users\86152\.dotnet\tools;C:\Program Files\Azure Data Studio\bin;C:\Users\86152\go\bin;D:\NVM\nvm;D:\NVM\nodejs;;."/>
+    <property name="maven.conf" value="D:\learning materials\Java\资料\apache-maven-3.6.0-bin\apache-maven-3.6.0/conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\86152"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="86152"/>
+    <property name="java.class.path" value="D:\learning materials\Java\资料\apache-maven-3.6.0-bin\apache-maven-3.6.0\boot\plexus-classworlds-2.5.2.jar;D:\learning materials\Java\IDEA-location\IntelliJ IDEA 2022.2.2\lib\idea_rt.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="D:\learning materials\Java\jdk-8u77-location\jre"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2022.2.2 -s D:\learning materials\Java\资料\apache-maven-3.6.0-bin\apache-maven-3.6.0\conf\settings.xml install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_77"/>
+    <property name="java.ext.dirs" value="D:\learning materials\Java\jdk-8u77-location\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="D:\learning materials\Java\jdk-8u77-location\jre\lib\resources.jar;D:\learning materials\Java\jdk-8u77-location\jre\lib\rt.jar;D:\learning materials\Java\jdk-8u77-location\jre\lib\sunrsasign.jar;D:\learning materials\Java\jdk-8u77-location\jre\lib\jsse.jar;D:\learning materials\Java\jdk-8u77-location\jre\lib\jce.jar;D:\learning materials\Java\jdk-8u77-location\jre\lib\charsets.jar;D:\learning materials\Java\jdk-8u77-location\jre\lib\jfr.jar;D:\learning materials\Java\jdk-8u77-location\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="D:\learning materials\Java\资料\apache-maven-3.6.0-bin\apache-maven-3.6.0"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.xw.OSSTest" name="com.xw.OSSTest.testOss" time="0.73"/>
+</testsuite>

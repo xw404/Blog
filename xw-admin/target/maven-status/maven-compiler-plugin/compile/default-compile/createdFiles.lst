@@ -1,0 +1,4 @@
+com\xw\controller\TagController.class
+com\xw\config\SecurityConfig.class
+com\xw\filter\JwtAuthenticationTokenFilter.class
+com\xw\BlogAdminApplication.class

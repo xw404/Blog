@@ -1,0 +1,67 @@
+package com.xw.sevice.impl;
+
+import com.xw.domain.ResponseResult;
+import com.xw.domain.entity.LoginUser;
+import com.xw.domain.entity.User;
+import com.xw.domain.vo.BlogUserLoginVo;
+import com.xw.domain.vo.UserInfoVo;
+import com.xw.sevice.BlogLoginService;
+import com.xw.utils.BeanCopyUtils;
+import com.xw.utils.JwtUtil;
+import com.xw.utils.RedisCache;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Service;
+
+import java.util.Objects;
+/**
+ * @Author 小吴
+ * @Date 2023/05/30 15:03
+ * @Version 1.0
+ */
+
+@Service
+public class BlogLoginServiceImpl implements BlogLoginService {
+
+    @Autowired
+    private AuthenticationManager authenticationManager;
+    @Autowired
+    private RedisCache redisCache;
+    @Override
+    public ResponseResult login(User user) {
+        UsernamePasswordAuthenticationToken authenticationToken =
+                new UsernamePasswordAuthenticationToken(user.getUserName(),user.getPassword());
+        Authentication authenticate = authenticationManager.authenticate(authenticationToken);
+        //判断是否认证通过
+        if (Objects.isNull(authenticate)){
+            throw new RuntimeException("用户名或密码错误");
+        }
+        //获取userid 生成token
+        LoginUser loginUser = (LoginUser)authenticate.getPrincipal();   //获取认证主体
+        //把用户信息存入redis
+        String userId = loginUser.getUser().getId().toString();
+        String jwt = JwtUtil.createJWT(userId);   //token
+        //把token和userinfo封装 返回   这里也可以使用map封装返回数据
+        redisCache.setCacheObject("blogLogin:"+userId,loginUser);
+        //把User转换成UserInfoVo
+        UserInfoVo userInfoVo = BeanCopyUtils.copyBean(loginUser.getUser(), UserInfoVo.class);
+        BlogUserLoginVo vo = new BlogUserLoginVo(jwt,userInfoVo);
+
+        return ResponseResult.okResult(vo);
+    }
+
+    @Override
+    public ResponseResult logout() {
+        //获取token,解析出userid
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        LoginUser loginUser= (LoginUser)authentication.getPrincipal();
+        //获取userId
+        Long userId = loginUser.getUser().getId();
+        //删除redis中的信息
+        redisCache.deleteObject("blogLogin:"+userId);
+        return ResponseResult.okResult();
+    }
+}

@@ -1,0 +1,32 @@
+server:
+  port: 8989
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/sg_blog?characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    上传文件大小配置
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 5MB
+
+mybatis-plus:
+  configuration:
+    # 日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      #逻辑删除字段
+      logic-delete-field: delFlag
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      #id递增
+      id-type: auto
+
+
+oss:
+  accessKey: T3IuDgpS6KLhY_WUIAkr3AcMWcMekJiRpcgC16Au
+  secretKey: h_aB3Fu5T_ghRFu2UiH0mY3iKCcXu4L-2Q4iVgvU
+  bucket: xiaowu404-blog
